@@ -29,7 +29,7 @@ public class MenuView extends JPanel{
 		title.setBounds(140, 20, 300, 30);
 		add(title);
 		
-		subTitle = new JLabel("Ejercicio: Julian Es Gei");
+		subTitle = new JLabel("Ejercicio: Nutricionista");
 		subTitle.setFont(new Font("Cooper black", Font.BOLD, 15));
 		subTitle.setForeground(Color.BLACK);
 		subTitle.setBounds(180, 100, 300, 30);

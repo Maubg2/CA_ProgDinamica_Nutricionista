@@ -6,6 +6,7 @@ import javax.swing.JLabel;
 public class MainView extends JFrame{
 	
 	private MenuView mv;
+	private NutritionistView vw;
 	
 	public MainView() {
 		
@@ -27,6 +28,25 @@ public class MainView extends JFrame{
 		mv.setBounds(0, 0, 550, 450);
 		getContentPane().add(mv);
 		
+		vw = new NutritionistView();
+		vw.setBounds(0, 0, 550, 450);
+		getContentPane().add(vw);
+		
 	}
 
+	public MenuView getMv() {
+		return mv;
+	}
+
+	public void setMv(MenuView mv) {
+		this.mv = mv;
+	}
+
+	public NutritionistView getVw() {
+		return vw;
+	}
+
+	public void setVw(NutritionistView vw) {
+		this.vw = vw;
+	}
 }
