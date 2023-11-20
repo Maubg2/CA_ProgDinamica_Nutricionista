@@ -9,17 +9,40 @@ import javax.swing.JOptionPane;
 import co.edu.unbosque.model.Solucion;
 import co.edu.unbosque.view.MainView;
 
+/***
+ * 
+ * Creamos una clase Controller para gestionar la ejecución del programa-
+ *
+ * 
+ * @author R00TS0FTW0RKS
+ * 
+ */
+
 public class Controller implements ActionListener{
 	
 	private MainView gui;
 	Solucion s;
+	
+	/***
+	 * 
+	 * Constructor de la clase Controller.
+	 * Inicializa la interfaz gráfica y la lógica del programa.
+	 * 
+	 */
 	
 	public Controller() {
 		
 		gui = new MainView();
 		setListeners();
 		s = new Solucion();
+		
 	}
+	
+	/***
+	 * 
+	 * Configura los listeners para los botones en la interfaz gráfica.
+	 * 
+	 */
 	
 	public void setListeners() {
 		
@@ -32,6 +55,11 @@ public class Controller implements ActionListener{
 		gui.getVw().getBack().setActionCommand("Regresar");
 		
 	}
+	
+	/*
+	 * Controla y estable la interacción del programa con el usuario a través de un menú y 
+	 * la previa escucha de los botones.
+	 */
 
 	@Override
 	public void actionPerformed(ActionEvent e) {

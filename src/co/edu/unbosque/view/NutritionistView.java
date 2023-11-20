@@ -6,19 +6,39 @@ import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
+/***
+ * 
+ * Creamos una clase llamada NutritionistView como ventana auxiliar para establecer
+ * los valores que requiere el programa para su ejecución.
+ * 
+ * @author R00TS0FTW0RKS
+ * 
+ */
+
 public class NutritionistView extends JPanel{
+	
+	//Componentes de la clase JPanel
 	
 	private JLabel labListaPlatos;
 	private JLabel labPlatos1;
 	private JLabel labPlatos2;
 	private JLabel labInpCantCal;
 	private JTextField InpCantCal;
+	private JTextArea results;
 	private JButton run;
 	private JButton back;
 	
 	public NutritionistView() {
+		
+		/***
+		 * 
+		 * Constructor de la clase NutritionistView.
+		 * Configura el diseño y los componentes de la interfaz gráfica.
+		 * 
+		 */
 		
 		setLayout(null);
 		setBackground(Color.GRAY);
@@ -26,6 +46,12 @@ public class NutritionistView extends JPanel{
 		setVisible(false);
 		
 	}
+	
+	/***
+	 * 
+	 * Inicializa y configura los componentes de la interfaz gráfica.
+	 * 
+	 */
 
 	private void execute() {
 		
@@ -50,26 +76,29 @@ public class NutritionistView extends JPanel{
 		labInpCantCal = new JLabel("Introduzca la cantidad de calorias deseada: ");
 		labInpCantCal.setFont(new Font("Arial", Font.ITALIC, 12));
 		labInpCantCal.setForeground(Color.BLACK);
-		labInpCantCal.setBounds(50, 200, 300, 30);
+		labInpCantCal.setBounds(90, 230, 300, 30);
 		add(labInpCantCal);
 		
 		InpCantCal = new JTextField("");
-		InpCantCal.setBounds(300, 200, 100, 30);
+		InpCantCal.setBounds(340, 230, 100, 30);
 		add(InpCantCal);
 		
 		run = new JButton("►");
 		run.setBackground(Color.BLACK);
 		run.setForeground(Color.WHITE);
-		run.setBounds(200, 300, 150, 30);
+		run.setBounds(350, 350, 100, 40);
 		add(run);
 		
 		back = new JButton("←");
 		back.setBackground(Color.BLACK);
 		back.setForeground(Color.WHITE);
-		back.setBounds(200, 350, 150, 30);
+		back.setBounds(100, 350, 100, 40);
 		add(back);
 		
 	}
+	
+	//Setters & getters generados para obtener los datos ingresados o escuchar los botones.
+	
 
 	public JTextField getInpCantCal() {
 		return InpCantCal;

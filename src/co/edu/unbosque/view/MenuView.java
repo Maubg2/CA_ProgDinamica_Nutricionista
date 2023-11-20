@@ -1,6 +1,16 @@
 package co.edu.unbosque.view;
 
 import java.awt.Color;
+
+/***
+ * 
+ * Creamos una clase llamada MenuView como ventana principal para iniciar la ejecución
+ * del programa.
+ * 
+ * @author R00TS0FTW0RKS
+ * 
+ */
+
 import java.awt.Font;
 
 import javax.swing.JButton;
@@ -9,10 +19,19 @@ import javax.swing.JPanel;
 
 public class MenuView extends JPanel{
 	
+	//Componentes de la clase JPanel
+	
 	private JLabel title;
 	private JLabel subTitle;
 	private JButton start;
 	private JButton exit;
+	
+	/***
+	 * 
+	 * Constructor de la clase MenuView.
+	 * Configura el diseño y los componentes de la interfaz gráfica.
+	 * 
+	 */
 	
 	public MenuView() {
 		setLayout(null);
@@ -20,6 +39,12 @@ public class MenuView extends JPanel{
 		funcionar();
 		setVisible(true);
 	}
+	
+	/***
+	 * 
+	 * Inicializa y configura los componentes de la interfaz gráfica.
+	 *
+	 */
 	
 	public void funcionar() {
 	
@@ -48,6 +73,8 @@ public class MenuView extends JPanel{
 		add(exit);
 		
 	}
+	
+	//Setters & getters generados para escuchar los botones.
 
 	public JLabel getTitle() {
 		return title;

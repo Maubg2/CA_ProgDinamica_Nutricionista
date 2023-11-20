@@ -3,10 +3,27 @@ package co.edu.unbosque.view;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+/***
+ * 
+ * Clase que representa la ventana principal de la aplicación.
+ * Contiene las vistas MenuView y NutritionistView.
+ * Configura el diseño y las propiedades de la ventana principal.
+ * 
+ * @author R00TS0FTW0RKS
+ * 
+ */
+
 public class MainView extends JFrame{
 	
 	private MenuView mv;
 	private NutritionistView vw;
+	
+	/***
+	 * 
+	 * Constructor de la clase MainView.
+	 * Configura el diseño y las propiedades de la ventana principal.
+	 * 
+	 */
 	
 	public MainView() {
 		
@@ -22,6 +39,12 @@ public class MainView extends JFrame{
 		
 	}
 	
+	/***
+	 * 
+	 * Inicializa y agrega las vistas MenuView y NutritionistView a la ventana principal.
+	 * 
+	 */
+	
 	public void execute() {
 		
 		mv = new MenuView();
@@ -33,6 +56,8 @@ public class MainView extends JFrame{
 		getContentPane().add(vw);
 		
 	}
+	
+	//Setters & getters generados para obtener los objetos.
 
 	public MenuView getMv() {
 		return mv;
