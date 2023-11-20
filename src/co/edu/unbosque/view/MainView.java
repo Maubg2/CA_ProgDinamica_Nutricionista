@@ -25,11 +25,11 @@ public class MainView extends JFrame{
 	public void execute() {
 		
 		mv = new MenuView();
-		mv.setBounds(0, 0, 550, 450);
+		mv.setBounds(0, 0, 550, 500);
 		getContentPane().add(mv);
 		
 		vw = new NutritionistView();
-		vw.setBounds(0, 0, 550, 450);
+		vw.setBounds(0, 0, 550, 500);
 		getContentPane().add(vw);
 		
 	}

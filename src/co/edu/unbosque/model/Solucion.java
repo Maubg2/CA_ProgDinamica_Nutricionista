@@ -14,12 +14,12 @@ public class Solucion {
 		
 	}
 	
-	public static int minimo(int a, int b) {
+	public int minimo(int a, int b) {
 		return (b<a)? b:a;
 		
 	}
 
-	public static int [][] operar(int [] lista, int n, int c){
+	public int [][] operar(int [] lista, int n, int c){
 		
 		int elementoMax = n + 1;
 		int cant = c + 1;
@@ -69,7 +69,7 @@ public class Solucion {
 
 	}
 	
-	private static Object[] resultado(int[][] t, int[] l, int n, int c ) {
+	private Object[] resultado(int[][] t, int[] l, int n, int c ) {
 		
 		List<Integer> r = new ArrayList<Integer>();
 		
@@ -98,7 +98,7 @@ public class Solucion {
 		
 	}
 	
-	public static void imprimir(int[] lista, int c) {
+	public void imprimir(int[] lista, int c) {
 		
 		int[][] tabla = operar(lista, lista.length, c);
 		

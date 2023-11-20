@@ -4,6 +4,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
 
+import javax.swing.JOptionPane;
+
 import co.edu.unbosque.model.Solucion;
 import co.edu.unbosque.view.MainView;
 
@@ -17,12 +19,6 @@ public class Controller implements ActionListener{
 		gui = new MainView();
 		setListeners();
 		s = new Solucion();
-		/*
-		s = new Solucion();
-		
-		int[] lista = { 7, 8, 9, 4, 5, 6 };
-		s.imprimir(lista, 10);
-		*/
 	}
 	
 	public void setListeners() {
@@ -32,6 +28,8 @@ public class Controller implements ActionListener{
 		
 		gui.getVw().getRun().addActionListener(this);
 		gui.getVw().getRun().setActionCommand("Solucionar");
+		gui.getVw().getBack().addActionListener(this);
+		gui.getVw().getBack().setActionCommand("Regresar");
 		
 	}
 
@@ -55,17 +53,33 @@ public class Controller implements ActionListener{
 				
 				int cant = Integer.parseInt(txta);
 				
-				String txtb = gui.getVw().getInpLista().getText();
-				
-				int[] lista = Arrays.stream(txtb.split(",")).mapToInt(Integer::parseInt).toArray();
-			
-				s.imprimir(lista, cant);
+				if(cant>=40) {
+					JOptionPane.showMessageDialog(null, "Nuestro menú ofrece un total de 39 Calorias en total",
+						      "ERORR 404 NOT FOUND :(", JOptionPane.ERROR_MESSAGE);
+					
+					gui.getVw().getInpCantCal().setText("");
+					
+				}else {
+					
+					int[] lista = {7,8,9,6,5,4};
+					s.imprimir(lista, cant);
+				}
+		
 				
 			} catch (NumberFormatException e2) {
 				// TODO: handle exception
-				System.out.println(e2);
+				JOptionPane.showMessageDialog(null, "SOLO SE PERMITEN NÚMEROS",
+					      "ERORR 404 NOT FOUND :(", JOptionPane.ERROR_MESSAGE);
+				gui.getVw().getInpCantCal().setText("");
 			}
 				
+			break;
+			
+		case"Regresar":
+			
+			gui.getVw().setVisible(false);
+			gui.getMv().setVisible(true);
+			
 			break;
 			
 		case"SALIR":

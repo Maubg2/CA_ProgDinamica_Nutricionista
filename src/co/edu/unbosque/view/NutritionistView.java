@@ -6,15 +6,15 @@ import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class NutritionistView extends JPanel{
 	
+	private JLabel labListaPlatos;
+	private JLabel labPlatos1;
+	private JLabel labPlatos2;
 	private JLabel labInpCantCal;
-	private JLabel labInpLista;
 	private JTextField InpCantCal;
-	private JTextArea inpLista;
 	private JButton run;
 	private JButton back;
 	
@@ -29,25 +29,33 @@ public class NutritionistView extends JPanel{
 
 	private void execute() {
 		
+		labListaPlatos = new JLabel("Menú de platos");
+		labListaPlatos.setFont(new Font("Arial", Font.BOLD, 20));
+		labListaPlatos.setForeground(Color.BLACK);
+		labListaPlatos.setBounds(190, 30, 350, 30);
+		add(labListaPlatos);
+		
+		labPlatos1 = new JLabel("| SANCOCHO : 7 Cal | AJIACO : 8 Cal | BANDEJA PAISA : 9 |");
+		labPlatos1.setFont(new Font("Arial", Font.ITALIC, 12));
+		labPlatos1.setForeground(Color.BLACK);
+		labPlatos1.setBounds(90, 60, 400, 100);
+		add(labPlatos1);
+		
+		labPlatos2= new JLabel("| LECHONA : 6 Cal | ARROZ CON HUEVO : 5 Cal | PAN DE BONO CON BOC : 4 |");
+		labPlatos2.setFont(new Font("Arial", Font.ITALIC, 12));
+		labPlatos2.setForeground(Color.BLACK);
+		labPlatos2.setBounds(40, 80, 450, 100);
+		add(labPlatos2);
+		
 		labInpCantCal = new JLabel("Introduzca la cantidad de calorias deseada: ");
 		labInpCantCal.setFont(new Font("Arial", Font.ITALIC, 12));
 		labInpCantCal.setForeground(Color.BLACK);
-		labInpCantCal.setBounds(50, 50, 300, 30);
+		labInpCantCal.setBounds(50, 200, 300, 30);
 		add(labInpCantCal);
 		
-		labInpLista = new JLabel("Introduzca el número de los platos que le llamaron la atención: ");
-		labInpLista.setFont(new Font("Arial", Font.ITALIC, 12));
-		labInpLista.setForeground(Color.BLACK);
-		labInpLista.setBounds(50, 150, 350, 30);
-		add(labInpLista);
-		
 		InpCantCal = new JTextField("");
-		InpCantCal.setBounds(300, 50, 100, 30);
+		InpCantCal.setBounds(300, 200, 100, 30);
 		add(InpCantCal);
-		
-		inpLista = new JTextArea("");
-		inpLista.setBounds(400, 150, 100, 100);
-		add(inpLista);
 		
 		run = new JButton("►");
 		run.setBackground(Color.BLACK);
@@ -69,14 +77,6 @@ public class NutritionistView extends JPanel{
 
 	public void setInpCantCal(JTextField inpCantCal) {
 		InpCantCal = inpCantCal;
-	}
-
-	public JTextArea getInpLista() {
-		return inpLista;
-	}
-
-	public void setInpLista(JTextArea inpLista) {
-		this.inpLista = inpLista;
 	}
 
 	public JButton getRun() {
